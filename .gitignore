@@ -3,3 +3,5 @@
 .idea/
 
 lsi_mnist_weights/
+
+**/videos/
