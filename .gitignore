@@ -5,3 +5,5 @@
 lsi_mnist_weights/
 
 **/videos/
+
+**/.DS_Store
