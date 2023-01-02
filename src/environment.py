@@ -91,6 +91,7 @@ class EnvironmentDescriptor:
         plt.plot(self.start_point[0], self.start_point[1], marker='o', markerfacecolor="green", markersize=10)
         plt.plot(self.end_point[0], self.end_point[1], marker='*', markerfacecolor="red", markersize=10)
         plt.imshow(self.grid_image(), extent=[-1.2, 1.2, -1.2, 1.2], origin='lower', cmap='gray_r')
+        return plt
 
 
 
