@@ -72,6 +72,8 @@ class ObstacleDescriptor:
         A range for min and max x and y values in a grid to center obstacle points around
     obstacle_descriptors: list
         A list of RBFKernel objects centered around random points in the obstacle_range
+    gamma: int
+        The distance parameter for the RBFKernels
 
     Methods
     -------
@@ -82,7 +84,7 @@ class ObstacleDescriptor:
         Returns the collective sum of values from each RBFKernel centered at the obstacle descriptors
     """
 
-    def __init__(self, obstacle_pts: int, obstacle_range: tuple, seed: int) -> None:
+    def __init__(self, obstacle_pts: int, obstacle_range: tuple, seed: int, gamma: int) -> None:
         """
         Parameters
         ----------
@@ -92,10 +94,13 @@ class ObstacleDescriptor:
             Range for the RBFKernel points as a 2-tuple
         :param seed: int
             Seed for the random number generator
+        :param gamma: int
+            The distance parameter to be used in the obstacle descriptors
         """
 
         self.obstacle_pts = obstacle_pts
         self.obstacle_range = obstacle_range
+        self.gamma = gamma
 
         random.seed(seed)
         self.obstacle_descriptors = [self.generate_obstacle_descriptor() for _ in range(obstacle_pts)]
@@ -108,7 +113,7 @@ class ObstacleDescriptor:
             An RBFKernel object initialized with the given gamma param and random origin in the range
         """
 
-        return RBFKernel(25, (
+        return RBFKernel(self.gamma, (
             random.uniform(self.obstacle_range[0], self.obstacle_range[1]),
             random.uniform(self.obstacle_range[0], self.obstacle_range[1]),
         ))
@@ -174,7 +179,8 @@ class EnvironmentDescriptor:
             obstacle_points: int,
             eta: int,
             grid_resolution: int,
-            seed: int
+            seed: int,
+            gamma: int
     ) -> None:
         """
         Parameters
@@ -195,6 +201,8 @@ class EnvironmentDescriptor:
             Number of parts to discretize the grid in along each axis
         seed: int
             The seed for the random number generator
+        gamma: int
+            The distance parameter to be used in the obstacle descriptors (RBFKernel)
         """
 
         self.__occ_grid = None
@@ -206,7 +214,7 @@ class EnvironmentDescriptor:
         self.eta = eta
         self.grid_resolution = grid_resolution
 
-        self.obstacle_descriptor = ObstacleDescriptor(self.obstacle_points, self.obstacle_point_range, seed)
+        self.obstacle_descriptor = ObstacleDescriptor(self.obstacle_points, self.obstacle_point_range, seed, gamma)
 
     def classify_point(self, point: tuple) -> PointClass:
         """
