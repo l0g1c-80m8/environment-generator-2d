@@ -102,7 +102,8 @@ class ObstacleDescriptor:
         self.obstacle_range = obstacle_range
         self.gamma = gamma
 
-        random.seed(seed)
+        if seed is not None:
+            random.seed(seed)
         self.obstacle_descriptors = [self.generate_obstacle_descriptor() for _ in range(obstacle_pts)]
 
     def generate_obstacle_descriptor(self) -> RBFKernel:
