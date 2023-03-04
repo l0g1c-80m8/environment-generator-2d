@@ -269,7 +269,17 @@ class EnvironmentDescriptor:
 
         plt.plot(self.start_point[0], self.start_point[1], marker='o', markerfacecolor="green", markersize=10)
         plt.plot(self.end_point[0], self.end_point[1], marker='*', markerfacecolor="red", markersize=10)
-        plt.imshow(self.occ_grid, extent=[-1.2, 1.2, -1.2, 1.2], origin='lower', cmap='gray_r')
+        plt.imshow(
+            self.occ_grid,
+            extent=[
+                self.environment_range[0],
+                self.environment_range[1],
+                self.environment_range[0],
+                self.environment_range[1]
+            ],
+            origin='lower',
+            cmap='gray_r'
+        )
 
     def save_env_img(self, out_path="../out/img.png") -> None:
         """
