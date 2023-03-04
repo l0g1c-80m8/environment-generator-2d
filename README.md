@@ -36,15 +36,23 @@ resolution if it is to be discretized into a configuration space.
 
 ## Parameters ##
 ```
-environment_range: (min limit, max limit) : the limits of the square environment.
-obstacle_point_range: (min limit, max limit) : points in the grid that can be obstacles.
-start_point: (start x, start y) : starting point in the environment.
-end_point: (end x, end y) : ending point in the enviropnment.
-obstacle_points: int ∈ (0, inf) : number of "obstacle points" for the kernel.
-eta: float : threshold (min weight) for classifying point as an obstacle.
-grid_resolution: int : resolution of grid for discretization.
-seed: int : a seed value for the psrng to generate the "obstacle points" kernels.
-gamma: int : weight for the RBF kernel.
+- environment_range: (min limit, max limit) : the limits of the square environment.
+
+- obstacle_point_range: (min limit, max limit) : points in the grid that can be obstacles.
+
+- start_point: (start x, start y) : starting point in the environment.
+
+- end_point: (end x, end y) : ending point in the enviropnment.
+
+- obstacle_points: int ∈ (0, inf) : number of "obstacle points" for the kernel.
+
+- eta: float : threshold (min weight) for classifying point as an obstacle.
+
+- grid_resolution: int : resolution of grid for discretization.
+
+- seed: int : a seed value for the psrng to generate the "obstacle points" kernels.
+
+- gamma: int : weight for the RBF kernel.
 ```
 
 ## Requirements
