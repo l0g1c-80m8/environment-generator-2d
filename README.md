@@ -7,7 +7,7 @@ A few application where such an environment representation is useful are:
 environments for robot 2D navigation, obstacle grids, random meshes, maze generation, etc. 
 
 
-### Environment Description
+## Environment Description
 
 The environment is the area defined in the domain of (xmin, xmax) × (ymin, ymax) along with
 starting point (xstart, ystart) and ending point (xgoal, ygoal). The environment representation is a
@@ -21,7 +21,7 @@ A point P in the limits of the environment (xmin, xmax) × (ymin, ymax) is an ob
 Note: the environment is a continuous space and not discretized. The environment needs a
 resolution if it is to be discretized into a configuration space.
 
-### Parameters
+## Parameters
 ```
 environment_range: (min limit, max limit) : the limits of the square environment.
 obstacle_point_range: (min limit, max limit) : points in the grid that can be obstacles.
@@ -34,7 +34,7 @@ seed: int : a seed value for the psrng to generate the "obstacle points" kernels
 gamma: int : weight for the RBF kernel.
 ```
 
-### Requirements
+## Requirements
 #### To use the environment description from the [```environment.py```](src/environment.py) file, the following dependencies are required:
 ```
 numpy
@@ -57,7 +57,7 @@ Install all requirements using ```pip install -r requirements.txt``` from projec
 
 ### Sample Environments Generated
 
-#### Parameters Used:
+### Parameters Used:
 
 ```
 environment_range = (-1.2, 1.2)
