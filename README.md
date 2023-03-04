@@ -47,6 +47,13 @@ tqdm
 Execute the main file using the command ```python main.py``` from src as the working directory. <br/>
 Note: make sure that the output file path exits.
 
+#### The source has been tested with the following versions:
+```
+matplotlib==3.1.2
+numpy==1.17.4
+tqdm==4.64.1
+```
+
 ### Sample Environments Generated
 
 #### Parameters Used:
