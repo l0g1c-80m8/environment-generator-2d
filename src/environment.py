@@ -178,7 +178,7 @@ class EnvironmentDescriptor:
             start_point: tuple,
             end_point: tuple,
             obstacle_points: int,
-            eta: int,
+            eta: float,
             grid_resolution: int,
             seed: int,
             gamma: int
