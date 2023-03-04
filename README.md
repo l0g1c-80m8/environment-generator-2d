@@ -53,6 +53,7 @@ matplotlib==3.1.2
 numpy==1.17.4
 tqdm==4.64.1
 ```
+Install all requirements using ```pip install -r requirements.txt``` from project source.
 
 ### Sample Environments Generated
 
