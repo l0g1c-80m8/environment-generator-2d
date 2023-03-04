@@ -11,16 +11,13 @@ environments for robot 2D navigation, obstacle grids, random meshes, maze genera
   * [Environment Description](#environment-description)
   * [Parameters](#parameters)
   * [Requirements](#requirements)
-      * [To use the environment description from the ```environment.py``` file, the following dependencies are required:](#to-use-the-environment-description-from-the-environmentpy-file-the-following-dependencies-are-required-)
-      * [Additional requirements to generate environments in bulk using the ```main.py``` file:](#additional-requirements-to-generate-environments-in-bulk-using-the-mainpy-file-)
-      * [The source has been tested with the following versions:](#the-source-has-been-tested-with-the-following-versions-)
   * [Sample Environments Generated](#sample-environments-generated)
     * [Parameters Used](#parameters-used)
-      * [Offset 0:](#offset-0-)
-      * [Offset 20:](#offset-20-)
-      * [Offset 40:](#offset-40-)
-      * [Offset 60:](#offset-60-)
-      * [Offset 80:](#offset-80-)
+      * [Offset 0](#offset-0)
+      * [Offset 20](#offset-20)
+      * [Offset 40](#offset-40)
+      * [Offset 60](#offset-60)
+      * [Offset 80](#offset-80)
 <!-- TOC -->
 
 ## Environment Description ##
