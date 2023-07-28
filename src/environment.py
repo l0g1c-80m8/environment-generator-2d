@@ -137,6 +137,7 @@ class EnvironmentDescriptor:
         A function to plot the grid
         """
 
+        plt.figure(figsize=(8, 8))
         plt.plot(self.start_point[0], self.start_point[1], marker='o', markerfacecolor="green", markersize=10)
         plt.plot(self.end_point[0], self.end_point[1], marker='*', markerfacecolor="red", markersize=10)
         plt.imshow(
