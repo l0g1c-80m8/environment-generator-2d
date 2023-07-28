@@ -159,3 +159,4 @@ class EnvironmentDescriptor:
 
         self.plot_environment()
         plt.savefig(out_path)
+        plt.close()
